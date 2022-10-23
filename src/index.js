@@ -35,6 +35,19 @@ function displayWeatherCondition(response) {
   iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`) ;
 }
 iconElement.setAttribute("alt", response.data.weather[0].description);
+
+function displayFahrenheitTemperature(event){
+  event.preventDefault();
+  alert("Link clicked");
+  let fahrenheitTemperature = (0* 9/5) + 32 ;
+
+
+}
+
+let fahrenheitLink = document.querySelector("#fan");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+
 //Current Location
 
 function searchLocation(position) {
