@@ -31,6 +31,7 @@ function displayWeatherCondition(response) {
   celly.innerHTML = `${temp}`;
   let tititle = document.querySelector("#tititle");
   tititle.innerHTML = response.data.name;
+  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/04d@2x.png`) ;
 }
 
 //Current Location
