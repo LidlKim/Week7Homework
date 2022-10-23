@@ -2,12 +2,12 @@ body {
   max-width: 800px;
   max-height: 700px;
   border: 5px;
-  background-color: blueviolet;
 }
 
 .card-body {
   text-align: left;
   padding-left: 10px;
+  color: blueviolet;
 }
 .Me {
   text-align: left;
