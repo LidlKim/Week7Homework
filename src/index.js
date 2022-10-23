@@ -25,6 +25,7 @@ function searchPlease(event) {
 let tititle = document.querySelector("#search-form");
 tititle.addEventListener("submit", searchPlease);
 function displayWeatherCondition(response) {
+  let iconElement = document.querySelector("#icon");
   let temp = Math.round(response.data.main.temp);
   console.log(temp);
   let celly = document.querySelector("#celly");
