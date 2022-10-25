@@ -40,6 +40,8 @@ function displayFahrenheitTemperature(event){
   event.preventDefault();
   alert("Link clicked");
   let fahrenheitTemperature = (0* 9/5) + 32 ;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement = Math.round(fahrenheitTemperature);
 
 
 }
