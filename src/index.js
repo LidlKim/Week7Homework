@@ -25,6 +25,7 @@ function searchPlease(event) {
 let tititle = document.querySelector("#search-form");
 tititle.addEventListener("submit", searchPlease);
 function displayWeatherCondition(response) {
+  celsiusTemperature = response.data.main.temp;
   let iconElement = document.querySelector("#icon");
   let temp = Math.round(response.data.main.temp);
   console.log(temp);
@@ -39,13 +40,13 @@ iconElement.setAttribute("alt", response.data.weather[0].description);
 function displayFahrenheitTemperature(event){
   event.preventDefault();
   
-  let fahrenheitTemperature = (12* 9/5) + 32 ;
+  let fahrenheitTemperature = (celsiusTemperature* 9/5) + 32 ;
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement = Math.round(fahrenheitTemperature);
 
 
 }
-
+let celsiusTemperature = null;
 let fahrenheitLink = document.querySelector("#fan");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
