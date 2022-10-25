@@ -13,3 +13,10 @@ body {
   text-align: left;
   padding-left: 10px;
 }
+.weather.temperature.active {
+  color: black;
+  cursor: default;
+}
+.weather.temperature.active:hover {
+  text-decoration: none;
+}
