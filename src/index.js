@@ -25,9 +25,6 @@ function searchPlease(event) {
 let tititle = document.querySelector("#search-form");
 tititle.addEventListener("submit", searchPlease);
 function displayWeatherCondition(response) {
-  celsiusTemperature = response.data.main.temp;
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
   let iconElement = document.querySelector("#icon");
   let temp = Math.round(response.data.main.temp);
   
@@ -36,6 +33,11 @@ function displayWeatherCondition(response) {
   let tititle = document.querySelector("#tititle");
   tititle.innerHTML = response.data.name;
   iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`) ;
+  
+  celsiusTemperature = response.data.main.temp;
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  
 }
 iconElement.setAttribute("alt", response.data.weather[0].description);
 
