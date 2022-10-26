@@ -24,22 +24,30 @@ function searchPlease(event) {
 
 let tititle = document.querySelector("#search-form");
 tititle.addEventListener("submit", searchPlease);
+
+
 function displayWeatherCondition(response) {
   let iconElement = document.querySelector("#icon");
   let temp = Math.round(response.data.main.temp);
-  
-  let celly = document.querySelector("#celly");
+
+  let celly = document.querySelector("#temperature");
   celly.innerHTML = `${temp}`;
   let tititle = document.querySelector("#tititle");
   tititle.innerHTML = response.data.name;
-  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`) ;
-  
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
   celsiusTemperature = response.data.main.temp;
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
-  
 }
-iconElement.setAttribute("alt", response.data.weather[0].description);
+
+
+
+
 
 function displayFahrenheitTemperature(event){
   event.preventDefault();
