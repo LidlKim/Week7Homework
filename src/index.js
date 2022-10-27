@@ -36,6 +36,9 @@ function displayWeatherCondition(response) {
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML= response.data.weather[0].description;
 
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = response.data.weather[0].wind;
+
   let tititle = document.querySelector("#tititle");
   tititle.innerHTML = response.data.name;
   iconElement.setAttribute(
