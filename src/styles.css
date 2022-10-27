@@ -24,3 +24,6 @@ body {
 .weather.temperature.active:hover {
   text-decoration: none;
 }
+.description {
+  text-transform: capitalize;
+}

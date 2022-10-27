@@ -32,6 +32,10 @@ function displayWeatherCondition(response) {
 
   let celly = document.querySelector("#temperature");
   celly.innerHTML = `${temp}`;
+
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML= response.data.weather[0].description;
+
   let tititle = document.querySelector("#tititle");
   tititle.innerHTML = response.data.name;
   iconElement.setAttribute(
