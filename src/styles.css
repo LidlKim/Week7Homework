@@ -24,6 +24,6 @@ body {
 .weather.temperature.active:hover {
   text-decoration: none;
 }
-.description {
+.card-title {
   text-transform: capitalize;
 }
