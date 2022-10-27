@@ -37,7 +37,7 @@ function displayWeatherCondition(response) {
   descriptionElement.innerHTML= response.data.weather[0].description;
 
   let windElement = document.querySelector("#wind");
-  windElement.innerHTML = response.data.wind.speed;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 
   let tititle = document.querySelector("#tititle");
   tititle.innerHTML = response.data.name;
