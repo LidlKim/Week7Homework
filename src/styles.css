@@ -27,3 +27,6 @@ body {
 .card-title {
   text-transform: capitalize;
 }
+.wind {
+  text-align: left;
+}
