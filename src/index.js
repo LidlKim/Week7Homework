@@ -63,11 +63,12 @@ let celsiusTemperature = null;
 let fahrenheitLink = document.querySelector("#fan-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-function displayCelsiusTemperature(event){
+function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement  = Math.round(celsiusTemperature);
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
