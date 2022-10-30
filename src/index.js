@@ -108,19 +108,19 @@ current.addEventListener("click", getCurrentLocation);
 
 function displayForecast(response) {
   
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector ("#forecast");
   
   let forecastHTML = `<div class="row">`;
-  let days = ["Thur", "Fri", "Sat"];
-  days.forEach(function(day){
+  
+  forecast.forEach(function(forecastDay){
     forecastHTML  = forecastHTML + `
    <div class="weather-forecast" id="forecast">
         
           <div class="col-2">
-            ${day}</div>
-            <img src="http://openweathermap.org/img/wn/01d@2x.png" />
-            <span class="forecast-temp"> 9</span> <span class = "c-unit"> °C </span> <span class="forecast-fantemp"> 66 </span> <span class="f-unit"> °F </span>
+            ${forecastDay.dt}</div>
+            <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
+            <span class="forecast-temp"> ${forecastDay.temp.max}</span> <span class = "min-unit"> °C </span> <span class="forecast-mintemp">  ${forecastDay.temp.min}</span> <span class="min-unit"> °C </span>
             
           
           
