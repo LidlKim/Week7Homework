@@ -106,28 +106,42 @@ function getCurrentLocation(event) {
 let current = document.querySelector("#current");
 current.addEventListener("click", getCurrentLocation);
 
+
+function formatDay (timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun","Mon","Tues","Wed","Thur","Fri","Sat"];
+  return days[day];
+
+
+}
+
 function displayForecast(response) {
+  if (index < 6 ) {
   
   let forecast = response.data.daily;
   let forecastElement = document.querySelector ("#forecast");
   
   let forecastHTML = `<div class="row">`;
   
-  forecast.forEach(function(forecastDay){
+  forecast.forEach(function(forecastDay, index){
     forecastHTML  = forecastHTML + `
    <div class="weather-forecast" id="forecast">
         
           <div class="col-2">
-            ${forecastDay.dt}</div>
+            ${formatDay(forecastDay.dt)}</div>
+            ${index}
             <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
-            <span class="forecast-temp"> ${forecastDay.temp.max}</span> <span class = "min-unit"> °C </span> <span class="forecast-mintemp">  ${forecastDay.temp.min}</span> <span class="min-unit"> °C </span>
+            <span class="forecast-temp"> ${Math.round(forecastDay.temp.max)}</span> <span class = "min-unit"> °C </span> <span class="forecast-mintemp">  ${Math.round(forecastDay.temp.min)}</span> <span class="min-unit"> °C </span>
             
           
           
       
         </div>`;
+  
 
   })
+}
   
         forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
