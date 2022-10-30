@@ -50,6 +50,7 @@ function displayWeatherCondition(response) {
   celsiusTemperature = response.data.main.temp;
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
+
 }
 
 
@@ -94,3 +95,32 @@ function getCurrentLocation(event) {
 }
 let current = document.querySelector("#current");
 current.addEventListener("click", getCurrentLocation);
+
+function displayForecast() {
+  
+  let forecastElement = document.querySelector ("#forecast");
+  
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thur", "Fri", "Sat"];
+  days.forEach(function(day){
+    forecastHTML  = forecastHTML + `
+   <div class="weather-forecast" id="forecast">
+        
+          <div class="col-16">
+            ${day}</div>
+            <img src="http://openweathermap.org/img/wn/01d@2x.png" />
+            <span class="forecast-temp"> 9</span><span class="forecast-fantemp"> 66 </span>
+            
+          
+          
+      
+        </div>`;
+
+  })
+  
+        forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+
+}
+displayForecast();
