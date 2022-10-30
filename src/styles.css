@@ -2,7 +2,7 @@ body {
   max-width: 800px;
   max-height: 700px;
   border: 5px;
-  background-color: #d87daf;
+  background-color: #e7aee8;
 }
 
 .card-bodys {
@@ -35,6 +35,6 @@ body {
 .current {
   background-color: #d87daf;
 }
-.searchbmit {
+.search {
   background-color: #d87daf;
 }
