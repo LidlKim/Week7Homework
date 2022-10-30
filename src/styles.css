@@ -2,6 +2,7 @@ body {
   max-width: 800px;
   max-height: 700px;
   border: 5px;
+  background-color: #d87daf;
 }
 
 .card-bodys {
@@ -30,4 +31,10 @@ body {
 }
 .wind {
   text-align: left;
+}
+.current {
+  background-color: #d87daf;
+}
+.search {
+  background-color: #d87daf;
 }
