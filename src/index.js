@@ -109,7 +109,7 @@ function displayForecast() {
           <div class="col-16">
             ${day}</div>
             <img src="http://openweathermap.org/img/wn/01d@2x.png" />
-            <span class="forecast-temp"> 9</span><span class="forecast-fantemp"> 66 </span>
+            <span class="forecast-temp"> 9</span> <span class = "c-unit"> °C </span> <span class="forecast-fantemp"> 66 </span> <span class="f-unit"> °F </span>
             
           
           
