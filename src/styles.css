@@ -42,9 +42,11 @@ body {
 }
 .current:hover {
   background-color: #6acaf7;
+  color: #00afa1;
 }
 .search:hover {
   background-color: #6acaf7;
+  color: #00afa1;
 }
 .search {
   background-color: #d87daf;
