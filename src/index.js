@@ -31,6 +31,8 @@ function getForecast(coordinates) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
+   let precipitationElement = document.querySelector("#Precipitation");
+  precipitationElement.innerHTML = response.data.rain;
 }
 
 function displayWeatherCondition(response) {
@@ -46,8 +48,7 @@ function displayWeatherCondition(response) {
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
 
-  let precipitationElement = document.querySelector("#Precipitation");
-  precipitationElement.innerHTML = response.data.daily.rain;
+ 
  
 
   let tititle = document.querySelector("#tititle");
