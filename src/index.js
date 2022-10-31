@@ -46,6 +46,9 @@ function displayWeatherCondition(response) {
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
 
+  let precipitationElement = document.querySelector ("#Precipitation");
+  precipitationElement.innerHTML = response.data.rain;
+
   let tititle = document.querySelector("#tititle");
   tititle.innerHTML = response.data.name;
   iconElement.setAttribute(
