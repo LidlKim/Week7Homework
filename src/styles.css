@@ -12,6 +12,7 @@ body {
   color: #202124;
   background-color: #e4b5f4;
   -webkit-tap-highlight-color: transparent;
+  opacity: 50%;
 }
 .card-title {
   font-size: 30px;
