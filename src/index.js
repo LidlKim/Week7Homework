@@ -47,7 +47,7 @@ function displayWeatherCondition(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
 
   let precipitationElement = document.querySelector("#Precipitation");
-  precipitationElement.innerHTML = response.data.main.rain;
+  precipitationElement.innerHTML = response.data.daily.rain;
  
 
   let tititle = document.querySelector("#tititle");
