@@ -2,7 +2,7 @@ body {
   max-width: 800px;
   max-height: 700px;
   border: 5px;
-  background-image: url(src/pinkclouds.jpeg);
+  background-image: url("src/pinkclouds.jpeg");
 }
 
 .card-bodys {
