@@ -8,7 +8,7 @@ body {
   text-align: left;
   padding-left: 45px;
   color: #202124;
-  background-image: href("src/pinkclouds.jpeg");
+  background-image: url(pinkclouds.jpeg);
 }
 .card-title {
   font-size: 30px;
