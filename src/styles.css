@@ -2,13 +2,14 @@ body {
   max-width: 800px;
   max-height: 700px;
   border: 5px;
+  background-image: url(src/pinkclouds.jpeg);
 }
 
 .card-bodys {
   text-align: left;
   padding-left: 45px;
   color: #202124;
-  background-image: url(src/pinkclouds.jpeg);
+  background-color: #e4b5f4;
 }
 .card-title {
   font-size: 30px;
