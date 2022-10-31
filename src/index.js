@@ -48,6 +48,7 @@ function displayWeatherCondition(response) {
 
   let precipitationElement = document.querySelector ("#Precipitation");
   precipitationElement.innerHTML = response.data.clouds;
+  console.log(precipitationElement);
 
   let tititle = document.querySelector("#tititle");
   tititle.innerHTML = response.data.name;
