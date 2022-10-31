@@ -36,6 +36,10 @@ body {
 }
 .current {
   background-color: #d87daf;
+  border-radius: 5%;
+}
+.current:hover {
+  background-color: #6acaf7;
 }
 .search {
   background-color: #d87daf;
