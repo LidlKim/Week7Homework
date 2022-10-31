@@ -3,13 +3,6 @@ body {
   max-height: 700px;
   border: 5px;
 }
-.bg-success {
-  --bs-bg-opacity: 1;
-  background-color: rgba(
-    var(--bs-success-rgb),
-    var(--bs-bg-opacity)
-  ) !important;
-}
 
 .card-bodys {
   text-align: left;
