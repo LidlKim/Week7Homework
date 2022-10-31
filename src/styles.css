@@ -7,7 +7,7 @@ body {
 }
 
 .card-bodys {
-  text-align: left;
+  text-align: center;
   padding-left: 45px;
   color: #202124;
   background-color: #e4b5f4;
@@ -15,12 +15,13 @@ body {
 }
 .card-title {
   font-size: 30px;
+  text-align: center;
   padding-left: 35px;
   margin-left: 25px;
   color: #9b5d98;
 }
 .Me {
-  text-align: left;
+  text-align: center;
   padding-left: 45px;
 }
 .weather.temperature.active {
@@ -34,7 +35,7 @@ body {
   text-transform: capitalize;
 }
 .wind {
-  text-align: left;
+  text-align: center;
 }
 .current {
   background-color: #d87daf;
